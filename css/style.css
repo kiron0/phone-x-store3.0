@@ -198,10 +198,13 @@ input {
   top: 0;
 }
 #details i,
-span,
+span {
+  color: #ff014f;
+}
+#details
 h2,
 h4 {
-  color: #ff014f;
+  color: rgb(53, 52, 52);
 }
 
 #details strong {

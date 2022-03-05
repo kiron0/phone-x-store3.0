@@ -41,11 +41,12 @@ const loading = () => {
 };
 //Display Error
 const showError = (errorText = "") => {
-  const h2 = document.createElement("h2");
-  h2.style.textAlign = "center";
-  h2.innerText = errorText;
+  const h3 = document.createElement("h3");
+  h3.style.textAlign = "center";
+  h3.style.color = "#ff014f";
+  h3.innerText = errorText;
   phoneDetails.innerHTML = "";
-  phoneDetails.appendChild(h2);
+  phoneDetails.appendChild(h3);
 };
 //Display Phone
 const showPhones = (phonesInfo) => {
