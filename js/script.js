@@ -97,7 +97,7 @@ const show20orMore = (arr) => {
                 <div class="col-md-7">
                   <h3><span class="dyanamic-text-color">${singlePhoneInfo.phone_name}</span></h3>
                   <h5><b>Brand:</b> <span class="dyanamic-text-color">${singlePhoneInfo.brand}</span></h5>
-                  <p><i>See More <i class="bi bi-arrow-left-right"></i></i></p>
+                  <p class="see-more"><i>See More <i class="bi bi-arrow-left-right"></i></i></p>
                 </div>
                 </div>
               </div>
