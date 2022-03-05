@@ -61,6 +61,7 @@ a{
 
 #phoneInput {
   width: 100%;
+  font-weight: 500;
   background: #ecf0f3;
   color: rgb(53, 52, 52);
   padding: 10px 0px;

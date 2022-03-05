@@ -32,7 +32,7 @@ btnSubmit.addEventListener("click", (e) => {
 const loading = () => {
   showError();
   const img = document.createElement("img");
-  img.setAttribute("src", "../img/search.svg");
+  img.setAttribute("src", "../images/loader.gif");
   img.setAttribute(
     "style",
     "margin: 0 auto; text-align: center; margin: 0 50%; transform: translate(-50%, -20%);"
