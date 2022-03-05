@@ -23,6 +23,9 @@ nav a {
   font-size: 30px;
   transition: 0.5s;
 }
+.bi-facebook:hover {
+  color: #1e4de6;
+}
 .bi-instagram:hover {
   color: red;
 }
@@ -31,6 +34,9 @@ nav a {
 }
 .bi-whatsapp:hover {
   color: #63d843;
+}
+.bi-linkedin:hover {
+  color: #1e4de6;
 }
 /* header area style  */
 header {
