@@ -63,7 +63,7 @@ const showPhones = (phonesInfo) => {
   //show more then 20 items
   if (phonesInfo.length > 20) {
     const div = document.createElement("div");
-    div.classList.add("col-md-4", "col-12", "my-2");
+    div.classList.add("col-md-4", "col-sm-4", "col-12", "my-2");
     div.setAttribute("id", "test");
     div.innerHTML = `
     <div class="d-flex align-items-center justify-content-center card-container show-more">
