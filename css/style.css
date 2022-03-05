@@ -52,7 +52,12 @@ a{
 }
 
 /* search area style start from here  */
+.search-container{
+  width: 50%;
+}
+
 #phoneInput {
+  width: 100%;
   background: #ecf0f3;
   color: #ff014f;
   padding: 10px 0px;
@@ -77,6 +82,7 @@ input {
   text-align: center;
 }
 #submit {
+  width: 75%;
   height: 60px;
   border-radius: 10px;
   background: #ecf0f3;
@@ -231,10 +237,53 @@ h4 {
 .show-more:hover > div {
   transform: rotate(90deg);
 }
-/* Resposived Design  */
-@media only screen and (max-width: 992px) {
-  /*Tablets [601px -> 960px]*/
+/*----------------------- Responsive Breakpoints ---------------------------*/
+@media screen and (max-width: 490px) {
+  header h1{
+    font-size: 3rem;
+  }
+  #phoneInput{
+    margin-top: -2rem;
+    width: 100%;
+  }
+
+  #submit{
+    margin-left: 32%;
+    width: 30%;
+    margin-top: 1.5rem;
+    height: 50px;
+  }
+  .search-container{
+    width: 90%;
+  }
   .card-container {
+    width: 100%;
     height: 400px;
+  }
+  .card {
+    margin-left: 4%;
+    width: 90%;
+    height: 100%;
+  }
+  .card img{
+    padding-top: 1.5rem;
+    margin-bottom: .5rem;
+  }
+  .card button{
+    margin-top: 1rem;
+  }
+  #close-btn {
+    top: 0%;
+    left: 82%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 992px) {
+  .card-container {
+    height: 280px;
   }
 }
