@@ -1,41 +1,62 @@
 :root{
-  --box-shadow-inset: inset 7px 8px 10px #c1c1c1, inset -7px -8px 10px #ffffff;
+  --green:#27ae60;
+  --black:#444;
+  --light-color:rgb(73, 69, 69);
+  --bg-color:#e6e6e6;
+  --border:.1rem solid rgba(0,0,0,.2);
+  --border2: none;
+  --box-shadow:.4rem .4rem 1rem #ccc,
+              -.4rem -.4rem 1rem #fff;
+  --box-shadow2:.4rem .4rem .5rem #ccc,
+              -.4rem -.4rem .5rem #fff;
+  --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                    -.4rem -.4rem 1rem #fff inset;
 }
 
 body {
-  background-color: #ecf0f3;
+  background-color: var(--bg-color);
 }
-/* nav item style  */
-/* .social-icons{
-  margin: 0 auto;
-  width: 25%;
-  border-radius: 10px;
-  box-shadow: 6px 5px 10px #c1c1c1, -6px -5px 10px #ffffff;
-} */
 
+body.active{
+  --black:#fff;
+  --white:#fff;
+  --light-color:#ddd;
+  --bg-color:#222;
+  --border:.1rem solid rgba(0,0,0,.4);
+  --box-shadow:.4rem .4rem 1rem #111,
+              -.4rem -.4rem 1rem #333;
+  --box-shadow-inset:.4rem .4rem 1rem #111 inset,
+                    -.4rem -.4rem 1rem #333 inset;
+}
+
+/* nav item style  */
 nav li {
   margin-top: 4rem;
   display: inline-block;
 }
 nav a {
-  color: #ecf0f3;
-  text-shadow: -2px -5px 4px #c1c1c1, 4px 4px 4px #ffffff;
+  color:var(--black);
+  box-shadow: var(--box-shadow);
+  margin-right: 10px;
   font-size: 30px;
+  border-radius: 10px;
   transition: 0.5s;
 }
-.bi-facebook:hover {
-  color: #1e4de6;
+nav a:hover {
+  color:var(--black);
+  box-shadow: var(--box-shadow-inset);
 }
-.bi-instagram:hover {
+.bi-facebook {
+  color: #446beb;
+}
+.bi-instagram {
   color: red;
 }
-.bi-github:hover {
-  color: #25292e;
-}
-.bi-whatsapp:hover {
+
+.bi-whatsapp {
   color: #63d843;
 }
-.bi-linkedin:hover {
+.bi-linkedin{
   color: #1e4de6;
 }
 /* header area style  */
@@ -43,21 +64,21 @@ header {
   margin: 5vh 0;
 }
 header h1 {
+  position: relative;
   margin: 0 auto;
   width: 30%;
   text-align: center;
   margin-bottom: 3rem;
   font-size: 60px;
-  color: #ecf0f3;
-  text-shadow: -2px -5px 4px #c1c1c1, 5px 4px 4px #ffffff;
-}
-
-h1:hover{
-  color: rgb(53, 52, 52);
 }
 
 a{
+  color: var(--white);
   text-decoration: none;
+}
+
+a:hover{
+  color: var(--black);
 }
 
 /* search area style start from here  */
@@ -67,42 +88,43 @@ a{
 
 #phoneInput {
   width: 100%;
-  background: #ecf0f3;
-  color: rgb(53, 52, 52);
   padding: 10px 0px;
   font-size: 24px;
   border: 0px;
   border-radius: 10px;
   padding: 10px 15px;
-  box-shadow: 6px 5px 10px #c1c1c1, -6px -5px 10px #ffffff;
+  background: var(--bg-color);
+  color: var(--white);
+  box-shadow: var(--box-shadow);
 }
 
 #phoneInput:hover {
-  box-shadow: var(--box-shadow-inset);
+  color:var(--white);
+    box-shadow: var(--box-shadow-inset);
 }
 
 *::-webkit-input-placeholder {
-  color: #c1c1c195;
+  color: var(--light-color);
 }
 input:focus {
   outline: 0px solid red;
 }
 input {
+  color: var(--white);
   text-align: center;
 }
 #submit {
   width: 75%;
   height: 60px;
   border-radius: 10px;
-  background: #ecf0f3;
-  box-shadow: 6px 5px 10px #c1c1c1, -6px -5px 10px #ffffff;
+  box-shadow: var(--box-shadow);
+  background: var(--bg-color);
 }
 #submit:hover {
-  box-shadow: var(--box-shadow-inset);
+    box-shadow: var(--box-shadow-inset);
 }
 #submit i {
-  color: rgb(53, 52, 52);
-  text-shadow: -2px -2px 5px #c1c1c1, -4px 4px 4px #ffffff;
+  color:var(--black);
   font-size: 25px;
 }
 /* search area style ended */
@@ -129,23 +151,22 @@ input {
   transition: 0.6s ease-in-out;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  /* perspective: 3000px; */
 }
 .card .row {
   transform: translateZ(100px);
   text-shadow: crimson;
-  /* background-color: aqua; */
   text-align: center;
   border-radius: 5px;
   width: 80%;
 }
 .front {
-  background-color: #ecf0f3;
-  box-shadow: 6px 5px 10px #c1c1c1, -6px -5px 10px #ffffff;
+  color:var(--white);
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
 }
 .back {
-  background-color: #ecf0f3;
-  box-shadow: 6px 5px 10px #c1c1c1, -6px -5px 10px #ffffff;
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
   transform: rotateY(180deg);
 }
 .card-container:hover .front {
@@ -163,16 +184,20 @@ input {
   justify-content: center;
 }
 .card button {
-  border: 2px solid rgb(53, 52, 52);
+  background: var(--bg-color);
+  color: var(--white);
+  box-shadow: var(--box-shadow);
+  border: var(--border2);
   border-radius: 5px;
+  padding: 10px;
   transition: 0.3s;
 }
 .card button:hover {
-  background-color: rgb(53, 52, 52);
-  color: #fff;
+  color: var(--white);
+  box-shadow: var(--box-shadow-inset);
 }
 .dyanamic-text-color {
-  color: rgb(53, 52, 52);
+  color:var(--black);
 }
 
 /* flip card style end here  */
@@ -198,22 +223,25 @@ input {
   position: absolute;
   top: 0;
 }
-#details i,
-span {
+#details i{
+  color: #ff014f;
+}
+#details span {
   color: #ff014f;
 }
 #details
 h2,
 h4 {
-  color: rgb(53, 52, 52);
+  color:var(--white);
 }
 
 #details strong {
+  color: var(--white);
   font-size: 13px;
   font-weight: 600;
 }
 .main-info {
-  box-shadow: 6px 5px 10px #c1c1c1, -6px -5px 10px #ffffff;
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   padding: 5px 10px;
   position: relative;
@@ -228,22 +256,17 @@ h4 {
   color: #ff014f !important;
 }
 
-/* #close-btn:hover {
-  color: #ff014f !important;
-} */
-
 /* details info style ended*/
 /* see more btn  */
 .show-more {
-  box-shadow: 6px 5px 10px #c1c1c1, -6px -5px 10px #ffffff;
+  box-shadow: var(--box-shadow);
   border: 0;
   border-radius: 10px;
   cursor: pointer;
 }
 .show-more i {
   font-size: 60px;
-  color: rgb(53, 52, 52);
-  text-shadow: -3px -4px 4px #c1c1c1, 6px 3px 4px #ffffff;
+  color:var(--black);
 }
 .show-more > div {
   transition: 0.3s;
@@ -251,11 +274,39 @@ h4 {
 .show-more:hover > div {
   transform: rotate(90deg);
 }
+
+#theme-toggler{
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  /* z-index: 1000; */
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  border-radius: 50%;
+  /* font-size: 1rem; */
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color:var(--black);
+  background: var(--bg-color);
+}
+
+#theme-toggler:hover{
+  color:var(--white);
+  box-shadow: var(--box-shadow-inset);
+}
+
 /*----------------------- Responsive Breakpoints ---------------------------*/
 @media screen and (max-width: 490px) {
   header h1{
-    width: 100%;
-    font-size: 3rem;
+    width: 80%;
+    font-size: 2rem;
+  }
+  #theme-toggler{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
   }
   #phoneInput{
     margin-top: -2rem;
