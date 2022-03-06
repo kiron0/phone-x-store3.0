@@ -147,7 +147,7 @@ const showDetails = (phoneID) => {
             <i class="bi bi-calendar3"></i>
             <span>Released</span>
             <strong>${data.data.releaseDate != ""
-          ? data.data.releaseDate.slice(9)
+          ? data.data.releaseDate
           : "Not Found!"
         }</strong>
           </li>
