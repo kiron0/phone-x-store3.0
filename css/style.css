@@ -200,6 +200,10 @@ input {
   color:var(--black);
 }
 
+img{
+  border-radius: 15px;
+}
+
 /* flip card style end here  */
 
 /* details info style start*/
