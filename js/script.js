@@ -92,19 +92,21 @@ const show20orMore = (arr) => {
               <div class="card front">
                 <div class="row">
                 <div class="col-md-5">
-                  <img class="img-fluid" src="${singlePhoneInfo.image}" alt="">
+                  <img class="img-fluid card-images" src="${singlePhoneInfo.image}" alt="">
                 </div>
                 <div class="col-md-7">
-                  <h3><span class="dyanamic-text-color">${singlePhoneInfo.phone_name}</span></h3>
+                  <h4><span class="dyanamic-text-color">${singlePhoneInfo.phone_name}</span></h4>
                   <h5><b>Brand:</b> <span class="dyanamic-text-color">${singlePhoneInfo.brand}</span></h5>
                   <p class="see-more"><i>See More <i class="bi bi-arrow-left-right"></i></i></p>
                 </div>
                 </div>
               </div>
+
+
               <div class="card back">
                 <div class="row">
                     <div class="col-md-5">
-                        <img class="img-fluid" src="${singlePhoneInfo.image}" alt="">
+                        <img class="img-fluid show-details-images" src="${singlePhoneInfo.image}" alt="">
                     </div>
                     <div class="col-md-7">
                         <button id="btn-details" onClick="showDetails('${singlePhoneInfo.slug}');">Show Details</button>
@@ -193,7 +195,7 @@ const showDetails = (phoneID) => {
       <div class="col-md-3">
         <img
           src="${data.data.image}"
-          alt=""
+          alt="" class="details-img"
         />
       </div>
       <div class="col-md-3">
