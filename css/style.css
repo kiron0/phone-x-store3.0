@@ -96,12 +96,12 @@ a:hover{
   padding: 10px 15px;
   background: var(--bg-color);
   color: var(--white);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-inset);
 }
 
 #phoneInput:hover {
   color:var(--white);
-    box-shadow: var(--box-shadow-inset);
+    /* box-shadow: var(--box-shadow-inset); */
 }
 
 *::-webkit-input-placeholder {
@@ -116,8 +116,8 @@ input {
 }
 #submit {
   width: 60%;
-  height: 65px;
-  margin-top: .2rem;
+  height: 61px;
+  margin-top: .3rem;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   background: var(--bg-color);
