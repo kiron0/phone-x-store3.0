@@ -78,7 +78,7 @@ a{
 }
 
 a:hover{
-  color: var(--black);
+  color: var(--white);
 }
 
 /* search area style start from here  */
