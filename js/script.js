@@ -1,3 +1,4 @@
+const preloader = document.querySelector(".loading").style.display = "none";
 // add event listener on enter button
 document
   .getElementById("phoneInput")
@@ -30,14 +31,11 @@ btnSubmit.addEventListener("click", (e) => {
 });
 //Loding
 const loading = () => {
-  showError();
-  const img = document.createElement("img");
-  img.setAttribute("src", "../images/loader.gif");
-  img.setAttribute(
-    "style",
-    "margin: 0 auto; text-align: center; margin: 0 50%; transform: translate(-50%, -20%);"
-  );
-  phoneDetails.appendChild(img);
+  // showError();
+  // document.querySelector(".loading").style.display = "block";
+  // setTimeout(function () {
+  //   document.querySelector(".loading").style.display = "none";
+  // }, 100);
 };
 //Display Error
 const showError = (errorText = "") => {
@@ -115,9 +113,10 @@ const show20orMore = (arr) => {
               </div>
             </div>
             `;
-    div.classList.add("col-md-4", "col-12", "my-2");
+    div.classList.add("col-sm-6", "col-md-4", "col-12", "my-2");
     allPhone.appendChild(div);
   }
+  document.querySelector(".loading").style.display = "none";
 };
 const showDetails = (phoneID) => {
   loading();
@@ -251,11 +250,11 @@ const closeBtn = (e) => {
 
 let themeToggler = document.querySelector('#theme-toggler');
 
-themeToggler.onclick = () =>{
-    themeToggler.classList.toggle('fa-sun');
-    if(themeToggler.classList.contains('fa-sun')){
-        document.body.classList.add('active');
-    }else{
-        document.body.classList.remove('active');
-    }
+themeToggler.onclick = () => {
+  themeToggler.classList.toggle('fa-sun');
+  if (themeToggler.classList.contains('fa-sun')) {
+    document.body.classList.add('active');
+  } else {
+    document.body.classList.remove('active');
+  }
 }

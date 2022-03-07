@@ -299,8 +299,14 @@ h4 {
 }
 
 #theme-toggler:hover{
-  color:var(--white);
+  color: var(--white);
   box-shadow: var(--box-shadow-inset);
+}
+/* spinner style */
+.loading {
+  color:var(--white);
+  background: var(--bg-color);
+  transition: opacity 0.5s;
 }
 
 /*----------------------- Responsive Breakpoints ---------------------------*/
